@@ -1,7 +1,23 @@
 .App {
   text-align: center;
+  position: relative;
+  background: rgba(0,0,0,0.01);
 }
-
+#toggle-btn{
+  position: fixed;
+  top: 10px;
+  transition: left 0.2s ease-in-out;
+}
+#loadmorebtn{
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #ffcc66;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #888888;
+  color: royalblue;
+}
 .App-logo {
   height: 40vmin;
 }

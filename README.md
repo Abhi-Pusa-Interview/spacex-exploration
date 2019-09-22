@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -17,52 +15,21 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### `Functionality implemented`
+1. On page load web application retrieves first five launches by making an All launches api call.
+2. Further, more launches can be loaded by clicking `load more button` at the bottom of the page.
+3. There is a hidden drawer implemented on the left side of the page which will toggle by clicking
+   the toggle button available on the top left cornor of the page.
+4. Inside drawer three radio buttons are available and by selecting one of them changes the API.
+5. Selecting 1st will call `all launches api` and will retrieve all the launches available.
+6. Selecting 2nd will make call to `past occured launches`.
+7. Selecting 3rd option will retrieve all the `upcoming launches`. 
+8. Apart from these radio buttons two filtering option is also provided. 
+9. Filter will retrieve all the unique field values corresponding to that field (e.g successful_launches 
+   can have two agreeded values true/false) from the data fetched from api till that time  and will add them in a dropdown, user can select a value from the dropdown list and depending upon that filter further data will be retrieved by API call.
+10. Application will render two components in line for bigger devices having screen width > 700px and 
+   one component per line for smaller width devices.(responsiveness).
+11. Application shows few information in a container that includes image,flight number,launch year,
+   mission name, Rocket Name, Rocket type, details.
+12. Test cases are written just to check if the component is rendered or not. Test casea are not written
+   for 100% test coverage.

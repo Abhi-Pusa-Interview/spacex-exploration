@@ -1,9 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+    // src/App.test.js
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+    import React from 'react';
+    import { shallow,mount } from 'enzyme';
+    import App from './App';
+
+    describe('App component', () => {
+      let wrapper;
+      beforeEach(()=>{
+        wrapper = shallow(<App />);
+      })
+      test('load more button is rendered', () => {
+        const text = wrapper.find('#loadmorebtn').text();
+        expect(text).toEqual('LoadMore');
+      });
+      test('load more button is rendered', () => {
+        const btn = wrapper.find('#toggle-btn');
+        expect(btn.length).toBe(1);
+      });
+    });
